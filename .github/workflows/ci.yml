@@ -34,7 +34,7 @@ jobs:
         run: uv run ruff check
 
       - name: Tests Python:${{ matrix.python-version }}
-        run: uv run pytest tests --cov --cov-report=xml --cov-report=term
+        run: uv run pytest
 
       # TODO: Setup CodeCov
       # - name: Upload coverage reports to Codecov
