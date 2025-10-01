@@ -1049,6 +1049,7 @@ dependencies = [
 all = [
     { name = "argdantic" },
     { name = "coolname" },
+    { name = "datasets" },
     { name = "huggingface-hub" },
     { name = "hydra-core" },
     { name = "ipywidgets" },
@@ -1060,6 +1061,7 @@ all = [
 ]
 data = [
     { name = "argdantic" },
+    { name = "datasets" },
     { name = "huggingface-hub" },
     { name = "tqdm" },
 ]
@@ -1083,22 +1085,12 @@ train = [
     { name = "wandb" },
 ]
 
-[package.dev-dependencies]
-data = [
-    { name = "datasets" },
-]
-dev = [
-    { name = "ruff" },
-]
-train = [
-    { name = "python-dotenv" },
-]
-
 [package.metadata]
 requires-dist = [
     { name = "adam-atan2", specifier = ">=0.0.1" },
     { name = "argdantic", marker = "extra == 'data'", specifier = ">=0.3.0" },
     { name = "coolname", marker = "extra == 'train'", specifier = ">=2.0.0" },
+    { name = "datasets", marker = "extra == 'data'", specifier = ">=4.1.1" },
     { name = "einops", specifier = ">=0.7.0" },
     { name = "hierarchical-reasoning-model", extras = ["train", "data", "notebooks"], marker = "extra == 'all'" },
     { name = "huggingface-hub", marker = "extra == 'data'", specifier = ">=0.19.0" },
@@ -1122,11 +1114,6 @@ requires-dist = [
     { name = "wandb", marker = "extra == 'train'", specifier = ">=0.15.0" },
 ]
 provides-extras = ["train", "data", "dev", "notebooks", "all"]
-
-[package.metadata.requires-dev]
-data = [{ name = "datasets", specifier = ">=4.1.1" }]
-dev = [{ name = "ruff", specifier = ">=0.13.2" }]
-train = [{ name = "python-dotenv", specifier = ">=1.1.1" }]
 
 [[package]]
 name = "httpcore"
